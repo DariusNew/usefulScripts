@@ -39,6 +39,16 @@ class Parser():
 				print ("windows targets not found")
 			else:
 				self.windows = self.read_file(self.folder.joinpath('windows.txt'))
+
+			if 'users.txt' not in self.files:
+				print ("users not found")
+			else:
+				self.users = self.read_file(self.folder.joinpath('users.txt'))
+
+			if 'passwords.txt' not in self.files:
+				print ("passwords not found")
+			else:
+				self.passwords = self.read_file(self.folder.joinpath('passwords.txt'))		
 		else:
 			pass
 
