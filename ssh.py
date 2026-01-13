@@ -3,7 +3,7 @@ import paramiko
 import socket
 from tqdm import tqdm
 
-class SSHTest():
+class SSHTester():
     def __init__(self, targets, user_list, pass_list, num_threads: int):
         self.targets = targets
         self.users = user_list
