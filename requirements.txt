@@ -1,0 +1,6 @@
+paramiko==4.0.0
+parimiko==0.2
+pycparser==2.23
+PySocks==1.7.1
+smbprotocol==1.15.0
+tqdm==4.67.1

@@ -1,9 +1,10 @@
+import argparse
 from pathlib import Path
+
 from parser import Parser
 from connectivity import ConnectivityTester
 from ssh import SSHTester
 from smb import SMBTester
-import argparse
 
 if __name__ == '__main__':
 
@@ -19,8 +20,8 @@ if __name__ == '__main__':
 	fileParser = Parser(path)
 	fileParser.run()
 
-	# test = ConnectivityTester(fileParser.targets, args.threads)
-	# test.run()
+	test = ConnectivityTester(fileParser.targets, args.threads)
+	test.run()
 
 	ssh = SSHTester(fileParser.linux, fileParser.users, fileParser.passwords, args.threads)
 	ssh.run()
